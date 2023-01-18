@@ -126,7 +126,7 @@ export const Details = ({entry, dispatch}) => {
   return (
     <>
       <h3 className="mb-8">{mainFilename}</h3>
-      <table className="-striped">
+      <table>
         <thead>
           <tr><th>Type</th><th>Value</th></tr>
         </thead>
