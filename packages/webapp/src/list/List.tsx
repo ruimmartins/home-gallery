@@ -12,7 +12,7 @@ import useBodyDimensions from '../utils/useBodyDimensions';
 import { useDeviceType, DeviceType } from "../utils/useDeviceType";
 import { fluent } from "./fluent";
 
-const NAV_HEIGHT = 44
+const NAV_HEIGHT = 8
 const BOTTOM_MARGIN = 4
 
 const useViewHeight = (offset) => {
@@ -65,7 +65,6 @@ export const List = () => {
 
   return (
     <>
-      <NavBar />
       <div style={{paddingTop: NAV_HEIGHT}}>
         <Scrollbar containerRef={containerRef}
           style={{marginTop: NAV_HEIGHT, marginBottom: BOTTOM_MARGIN}}
