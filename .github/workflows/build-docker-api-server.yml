@@ -2,6 +2,7 @@
 name: 'build api-server docker images'
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
