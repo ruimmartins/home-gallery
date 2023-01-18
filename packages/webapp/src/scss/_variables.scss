@@ -6,7 +6,7 @@ Styleguide 1
 $black: #000;
 $white: #fff;
 
-$background-color: #222;
+$background-color: $white;
 $background-color-01dp: mix($white, $background-color, 5%);
 $background-color-02dp: mix($white, $background-color, 7%);
 $background-color-03dp: mix($white, $background-color, 8%);
@@ -18,15 +18,18 @@ $background-color-16dp: mix($white, $background-color, 15%);
 $background-color-24dp: mix($white, $background-color, 16%);
 
 $font-size: 12px;
-$text-high-color: mix($white, $black, 87%);
-$text-color: mix($white, $black, 60%);
-$text-low-color: mix($white, $black, 38%);
+$text-high-color: $color-grey-900;
+$text-color: $color-grey-800;
+$text-low-color: $color-grey-700;
 
 $hover-amount: 8%;
 $focus-amount: 12%;
 
 $unit: 8px;
-$border-radius: 3px;
+$border-radius: 4px;
+
+$box-shadow: 0px 0px 4px $color-grey-400;
+$box-shadow-soft: 0px 0px 3px $color-grey-400;
 
 $primary-color: rgb(101, 248, 180);
 
