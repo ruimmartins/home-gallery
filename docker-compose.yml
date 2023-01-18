@@ -3,7 +3,7 @@ services:
   api:
     # custom build via
     #build: packages/api-server
-    image: xemle/home-gallery-api-server
+    image: ruimmartins/home-gallery-api-server
     environment:
       # TensorflowJS backends
       # - cpu: slowest and best support
@@ -15,7 +15,7 @@ services:
   gallery:
     # custom build via
     #build: .
-    image: xemle/home-gallery
+    image: ruimmartins/home-gallery
     environment:
       - GALLERY_API_SERVER=http://api:3000
       #- GALLERY_API_SERVER_CONCURRENT=1 # On low powered devices
