@@ -6,6 +6,9 @@
 .fluent__cell {
   margin-left: 8px;
   position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow-soft;
 
   img {
     object-fit: cover;
@@ -20,35 +23,18 @@
 
   ._detail {
     position: absolute;
-    right: 4px;
-    bottom: 4px;
-    border-radius: $border-radius;
-    padding-left: 8px;
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    bottom: 0px;
+    padding-top: 4px;
     padding-right: 8px;
-    color: $text-high-color;
-    background-color: rgba(0, 0, 0, 0.25);
-
-    .fas {
-      color: $text-high-color;
-    }
-  }
-
-  &:hover {
-    ._detail {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-  }
-}
-
-@include only-sm {
-  .fluent__cell ._detail {
-    padding-left: 4px;
-    padding-right: 4px;
-    color: $text-high-color;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    .fas {
-      color: $text-high-color;
-    }
+    color: $text-low-color;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(200deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.30155812324929976) 50%, rgba(255, 255, 255, 0) 100%);
   }
 }
