@@ -76,7 +76,7 @@ export const ScrollbarHandle = ({dispatch, top, visible, detailText, showDetail}
 
   return (
     <>
-      <div className={`scrollbar_handle ${visibleToClass[visible] || ''}`} ref={handleRef} style={{top: top}}>
+      <div className={'scrollbar_handle'} ref={handleRef} style={{top: top}}>
         {detailText && <div className={`scrollbar_detail ${showDetail ? '' : '-hidden'}`}>{detailText}</div>}
         <div className="scrollbar_thumb" ref={thumbRef} >
           <Icon icon='fa-chevron-up' onClick={handleUpClick} />

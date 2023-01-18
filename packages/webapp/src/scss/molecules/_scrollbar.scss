@@ -209,41 +209,12 @@ $scrollbar-overview-circle-width: 8px;
 .scrollbar_handle {
   position: absolute;
   right: 0;
-  margin-right: 8px;
+  margin-right: -20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   z-index: 3;
   opacity: 1;
-
-  &.-partial {
-    opacity: .5;
-  }
-
-  &.-hidden {
-    opacity: 0;
-    display: none;
-  }
-
-  &.-small {
-    margin-right: 0;
-
-    .scrollbar_thumb {
-      height: 50px;
-      width: 8px;
-
-      &:hover {
-        background-color: $scrollbar-thumb-hover-color;
-      }
-      &.--active {
-        background-color: $scrollbar-thumb-active-color;
-      }
-
-      .fas {
-        visibility: hidden;
-      }
-    }
-  }
 }
 
 .scrollbar_detail {
@@ -252,6 +223,8 @@ $scrollbar-overview-circle-width: 8px;
   padding: 4px 8px;
   background-color: $scrollbar-thumb-color;
   border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  font-weight: 700;
 
   &.-hidden {
     display: none;
@@ -260,21 +233,16 @@ $scrollbar-overview-circle-width: 8px;
 
 .scrollbar_thumb {
   display: flex;
+  width: 50px;
+  height: 50px;
+  padding-top: 5px;
+  padding-left: 9px;
   flex-direction: column;
   background-color: $scrollbar-thumb-color;
-  border-radius: $border-radius;
+  border-radius: 100%;
+  box-shadow: $box-shadow;
 
   .fas {
-    padding: 8px;
-
-    &:hover {
-      color: $text-high-color;
-      background-color: $scrollbar-thumb-hover-color;
-    }
-  }
-
-  &.--active .fas {
-    color: $text-high-color;
-    background-color: $scrollbar-thumb-active-color;
+    padding: 4px;
   }
 }
