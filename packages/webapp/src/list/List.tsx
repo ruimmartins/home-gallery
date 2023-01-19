@@ -44,7 +44,7 @@ export const List = () => {
   const [ deviceType ] = useDeviceType();
 
   const viewHeight = height - NAV_HEIGHT - BOTTOM_MARGIN
-  const padding = 8
+  const padding = 4
 
   const visibleEntries = useMemo(() => {
     if (!showSelected) {
