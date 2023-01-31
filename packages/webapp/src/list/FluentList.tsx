@@ -81,7 +81,6 @@ const Cell = ({height, width, index, item, items}) => {
       <img style={style} src={previewUrl} loading="lazy" />
       {type == 'video' &&
         <span className="_detail">
-          <i className="fas fa-play pr-4"></i>
           {humanizeDuration(duration)}
         </span>
       }
