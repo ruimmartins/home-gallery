@@ -33,7 +33,7 @@ export const Scrollbar = ({containerRef, style, pageHeight, topDateItems}: Scrol
     dispatch({type: 'overviewItems', overviewItems, detailTextFn})
   }, [topDateItems, pageHeight, handleHeight])
 
-  useEffect(() => dispatch({type: 'scrollTo', scrollTop}), [scrollTop])
+  useEffect(() => dispatch({type: 'scrollTo', scrollTop}), [scrollTop, topDateItems])
 
   useEffect(() => setScrollViewHeight(pageHeight), [pageHeight])
 
