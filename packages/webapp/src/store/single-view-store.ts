@@ -11,13 +11,7 @@ export interface SingleViewStore {
   setShowNavigation(show: boolean): void
 }
 
-export const useSingleViewStore = create<
-  SingleViewStore,
-  [
-    ["zustand/persist", SingleViewStore]
-  ]
->(
-  persist((set) => ({
+export const useSingleViewStore = create<SingleViewStore>((set) => ({
   lastId: '',
   showDetails: false,
   showNavigation: true,
@@ -25,4 +19,4 @@ export const useSingleViewStore = create<
   setLastId: (lastId: string) => set((state) => ({...state, lastId})),
   setShowDetails: (show: boolean) => set((state) => ({...state, showDetails: show})),
   setShowNavigation: (show: boolean) => set((state) => ({...state, showNavigation: show})),
-}), { name: 'gallery-single-view' }))
+}))
