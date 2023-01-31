@@ -64,13 +64,7 @@ const getSelectionRangeIds = (entries: Entry[], firstId, lastId) => {
   return ids
 }
 
-export const useEditModeStore = create<
-  EditModeStore,
-  [
-    ["zustand/persist", EditModeStore]
-  ]
->(
-  persist((set, get) => ({
+export const useEditModeStore = create<EditModeStore>((set, get) => ({
   viewMode: ViewMode.VIEW,
   selectedIds: {},
   lastSelectedId: '',
@@ -135,6 +129,6 @@ export const useEditModeStore = create<
   },
   reset: () => set((state) => ({...state, selectedIds: {}, lastSelectedId: '', inverted: false, showSelected: false})),
   toggleShowSelected: () => set((state) => ({...state, showSelected: !state.showSelected}))
-}), { name: 'gallery-edit-mode' }))
+}))
 
 export const isSelected = (id: string, state: EditModeStore) => state.selectedIds[id]

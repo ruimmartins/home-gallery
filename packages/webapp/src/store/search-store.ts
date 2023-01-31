@@ -55,13 +55,7 @@ const updateQuery = async (query: Search) => {
   useEntryStore.getState().setEntries(entries)
 }
 
-export const useSearchStore = create<
-  SearchStore,
-  [
-    ["zustand/persist", SearchStore]
-  ]
-  >(
-  persist((set, get) => ({
+export const useSearchStore = create<SearchStore>((set, get) => ({
     query: { type: 'none' },
 
     search: (query: Search) => {
@@ -71,7 +65,7 @@ export const useSearchStore = create<
     refresh: async () => {
       updateQuery(get().query)
     }
-  }), { name: 'gallery-search' })
+  })
 )
 
 const refresh = () => useSearchStore.getState().refresh()
