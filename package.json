@@ -8,7 +8,8 @@
     "clean": "pnpm -r clean",
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "test:e2e": "gauge -d e2e run specs"
+    "test:e2e": "gauge -d e2e run specs",
+    "dev:webapp": "cd ./packages/webapp && npm run dev"
   },
   "bin": {
     "gallery": "./gallery.js"
