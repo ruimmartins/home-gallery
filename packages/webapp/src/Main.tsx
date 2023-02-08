@@ -13,7 +13,7 @@ import { useEventStore } from './store/event-store'
 
 import { fetchAll, getEvents, eventStream, mapEntriesForBrowser } from './api/ApiService';
 
-import { AllView } from "./list/All";
+import { MainView } from "./main/MainView";
 import { SearchView } from './list/Search';
 import { SimilarView } from './list/Similar';
 import { FacesView } from './list/Faces';
@@ -75,7 +75,7 @@ export const Main = () => {
       <BrowserRouter basename={base}>
         <LastLocationProvider>
           <Routes>
-            <Route path="/" element={<AllView />} />
+            <Route path="/" element={<MainView />} />
             <Route path="/years" element={<Years />} />
             <Route path="/years/:year" element={<YearView />} />
             <Route path="/view/:id" element={<MediaView />} />

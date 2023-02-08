@@ -13,7 +13,7 @@ import { useDeviceType, DeviceType } from "../utils/useDeviceType";
 import { fluent } from "./fluent";
 
 const NAV_HEIGHT = 8
-const BOTTOM_MARGIN = 4
+const BOTTOM_MARGIN = 8
 
 const useViewHeight = (offset) => {
   const getHeight = () => (document.documentElement.clientHeight)+ offset
@@ -44,7 +44,7 @@ export const List = () => {
   const [ deviceType ] = useDeviceType();
 
   const viewHeight = height - NAV_HEIGHT - BOTTOM_MARGIN
-  const padding = 4
+  const padding = 8
 
   const visibleEntries = useMemo(() => {
     if (!showSelected) {
